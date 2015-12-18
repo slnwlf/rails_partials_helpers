@@ -17,7 +17,7 @@
   <h4>User's Recipes</h4>
   <hr>
   <% @user.recipes.each do |recipe| %>
-    <strong><%= recipe.title %></strong> - <a href="/recipes/<%= recipe.id %>">View Recipe</a>
+    <strong><%= recipe.name %></strong> - <a href="/recipes/<%= recipe.id %>">View Recipe</a>
     <hr>
   <% end %>
 <% end %>
