@@ -1,0 +1,6 @@
+<h1>Recipe Book</h1>
+<hr>
+<% @recipes.each do |recipe| %>
+  <strong><%= recipe.name %></strong> - <%= link_to "View Recipe", recipe_path(recipe) %>
+  <hr>
+<% end %>
