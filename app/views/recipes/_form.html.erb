@@ -1,0 +1,11 @@
+<%= form_for @recipe do |f| %>
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, placeholder: "Recipe name", class: "form-control", autofocus: true %>
+  </div>
+  <div class="form-group">
+    <%= f.label :instructions %>
+    <%= f.text_area :instructions, placeholder: "Type your recipe instructions here", class: "form-control" %>
+  </div>
+  <%= f.submit "Save Recipe", class: "btn btn-block btn-default" %>
+<% end %>
