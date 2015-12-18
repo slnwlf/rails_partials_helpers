@@ -1,3 +1,18 @@
+<h1>Log In refactored</h1>
+<hr>
+
+<%= form_for :user, url: "/sessions" do |f| %>
+<div class="form-group">
+  <%= f.text_field :email, class: "form-control", placeholder: "name", autofocus: true %>
+  <%= f.password_field :password, class: "form-control", placeholder: "password" %>
+
+  <%= f.submit "Log-in!", class: "btn btn-block btn-primary" %>
+</div>
+<% end %>
+
+
+
+
 <h1>Log In</h1>
 <hr>
 <form action="/sessions" method="post">
