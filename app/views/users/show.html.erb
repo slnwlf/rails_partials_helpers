@@ -17,7 +17,7 @@
   <h4>User's Recipes</h4>
   <hr>
   <% @user.recipes.each do |recipe| %>
-    <strong><%= recipe.title %></strong> - <%= link_to "View Recipe", recipe_path(recipe) %>
+    <strong><%= recipe.name %></strong> - <%= link_to "View Recipe", recipe_path(recipe) %>
     <hr>
   <% end %>
 <% end %>

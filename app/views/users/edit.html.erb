@@ -1,9 +1,11 @@
 <h1>Edit Profile</h1>
 <hr>
-<%= form_for @user do |f| %>
+<form action="/users/<%= @user.id %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <div class="form-group">
-    <%= f.label :email %>
-    <%= f.email_field :email, placeholder: "email@example.com", class: "form-control", autofocus: true %>
+    <label for="user_email">Email</label>
+    <input type="text" name="user[email]" class="form-control" id="user_email" placeholder="email@example.com" value="<%= @user.email %>" autofocus>
   </div>
-  <%= f.submit "Save Profile", class: "btn btn-block btn-default" %>
-<% end %>
+  <input type="submit" value="Save Profile" class="btn btn-block btn-default">
+</form>
