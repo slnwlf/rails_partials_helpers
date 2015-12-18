@@ -1,11 +1,11 @@
 # <img src="https://cloud.githubusercontent.com/assets/7833470/10899314/63829980-8188-11e5-8cdd-4ded5bcb6e36.png" height="60"> Review: Rails Partials & Helpers
 
-**Objective:** Refactor all forms and links in this application to take advantage of Rails partials and view helpers (`form_for` and `link_to`).
+**Objective:** Refactor all forms, links, and redirects in this application to take advantage of Rails partials, view helpers (`form_for` and `link_to`), and path prefixes.
 
 ## Getting Started
 
 1. Fork this repo, and clone it into your `develop` folder on your local machine.
-2. Change directories into `rails_partials`, and `bundle install`.
+2. Change directories into `rails_partials_helpers`, and `bundle install`.
 3. Run `rake db:create db:migrate` (make sure PosgreSQL is running).
 4. Start your Rails server, then you're ready to go!
 
