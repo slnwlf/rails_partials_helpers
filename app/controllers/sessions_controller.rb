@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
   def new
     # don't let current_user see the log in view
     if current_user
-      redirect_to user_path(current_user)
+      redirect_to "/users/#{current_user.id}"
     end
   end
 
@@ -15,17 +15,17 @@ class SessionsController < ApplicationController
       # logged in when they navigate around our website.
       session[:user_id] = @user.id
       flash[:notice] = "Successfully logged in."
-      redirect_to user_path(@user)
+      redirect_to "/users/#{@user.id}"
     else
       flash[:error] = "Incorrect email or password."
-      redirect_to login_path
+      redirect_to "/login"
     end
   end
 
   def destroy
     session[:user_id] = nil
     flash[:notice] = "Successfully logged out."
-    redirect_to root_path
+    redirect_to "/"
   end
 
   private
