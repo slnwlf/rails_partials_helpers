@@ -7,8 +7,8 @@
 <% if current_user && current_user == @user %>
   <hr>
   <p>
-    <%= link_to "Edit Profile", edit_user_path(@user), class: "btn btn-default" %>
-    <%= link_to "Delete Profile", user_path(@user), method: :delete, class: "btn btn-default" %>
+    <a href="/users/<%= @user.id %>/edit" class="btn btn-default">Edit Profile</a>
+    <a href="/users/<%= @user.id %>" data-method="delete" class="btn btn-default" >Delete Profile</a>
   </p>
 <% end %>
 
@@ -17,7 +17,7 @@
   <h4>User's Recipes</h4>
   <hr>
   <% @user.recipes.each do |recipe| %>
-    <strong><%= recipe.title %></strong> - <%= link_to "View Recipe", recipe_path(recipe) %>
+    <strong><%= recipe.title %></strong> - <a href="/recipes/<%= recipe.id %>">View Recipe</a>
     <hr>
   <% end %>
 <% end %>
