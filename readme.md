@@ -15,5 +15,6 @@
 2. Refactor any duplicate code (hint: recipes new and edit forms) to use a partial. (<a href="http://guides.rubyonrails.org/layouts_and_rendering.html#using-partials" target="_blank">docs</a>)
 3. While you're at it, refactor the Bootstrap nav in the application layout to use a partial as well.
 4. Find all `<a></a>` tags in the views, and refactor them to use the `link_to` helper. (<a href="http://apidock.com/rails/ActionView/Helpers/UrlHelper/link_to" target="_blank">docs</a>)
+5. Find all redirects (`redirect_to`) in the controller methods, and refactor them to use path prefixes. (<a href="http://guides.rubyonrails.org/routing.html#prefixing-the-named-route-helpers" target="_blank">docs</a>)
 
 Refer to the [solution branch]() for guidance.
